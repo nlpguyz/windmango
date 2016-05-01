@@ -1,0 +1,161 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <LinearLayout android:id="@+id/board_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dip"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dip"
+        >
+        <LinearLayout         
+            android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="horizontal"
+	        android:visibility="gone"
+        >
+	        <ImageView android:id="@+id/gogui_first_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/gogui_first" 
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+	        />
+	        <ImageView android:id="@+id/gogui_previous_10_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/gogui_previous_10" 
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+	        />
+	        <ImageView android:id="@+id/gogui_previous_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/gogui_previous" 
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+	        />
+	        <ImageView android:id="@+id/gogui_next_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/gogui_next" 
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+	        />
+	        <ImageView android:id="@+id/gogui_next_10_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/gogui_next_10" 
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+	        />
+	        <ImageView android:id="@+id/gogui_last_button"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:src="@drawable/gogui_last" 
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+	        />
+	        
+	        <Button
+	            android:id="@+id/test_sgf"
+	            android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_gravity="center_vertical"
+		        android:layout_marginLeft="10dip"
+		        android:text="test sgf"
+	            />
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/redo_button"
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dip"
+	        android:text="@string/redo"
+	        android:layout_weight="1"
+            />
+                
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dip"
+	        android:text="@string/back"
+	        android:layout_weight="1"
+            />
+        <Button
+            android:id="@+id/try_button"
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dip"
+	        android:text="@string/try_work"
+	        android:layout_weight="1"
+            />
+                
+        <Button
+            android:id="@+id/answer_button"
+            android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_gravity="center_vertical"
+	        android:layout_marginLeft="10dip"
+	        android:text="@string/answer"
+	        android:layout_weight="1"
+            />
+                
+    </LinearLayout>
+    
+	<RelativeLayout
+	    android:id="@+id/game_board_layout"
+	    android:layout_width="fill_parent"
+    	android:layout_height="fill_parent"
+    	android:layout_marginTop="10dip"
+        android:layout_above="@id/board_bar"
+    	>
+        <LinearLayout
+            android:id="@+id/board_title"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"  
+	        android:layout_alignParentTop="true"
+	        android:visibility="gone"
+            >
+          <TextView
+            android:id="@+id/page_num"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content" 
+	        android:gravity="center"
+	        android:textSize="20sp"
+	        android:visibility="gone"
+            />
+        </LinearLayout>
+
+        
+        <LinearLayout 
+            android:id="@+id/board"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical"
+	        android:layout_alignParentBottom="true"
+	         >
+        </LinearLayout>
+        
+        <TextView
+            android:id="@+id/node_comment"
+	        android:layout_width="fill_parent"
+	        android:layout_height="fill_parent" 
+	        android:gravity="center_vertical"
+	        android:textSize="20sp"
+	        android:layout_above="@id/board"
+	        android:layout_below="@id/board_title"
+            />
+	</RelativeLayout>
+    
+</RelativeLayout>

@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/waitting_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" >
+    
+    <ImageView
+        android:id="@+id/welcome_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="30dip"
+        android:background="@drawable/waitting_bg"
+        />
+    <RelativeLayout
+        android:id="@+id/waitting_init_data_source_finish_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:layout_below="@id/welcome_logo"
+        android:visibility="gone"
+        >
+	     <ProgressBar 
+	        android:id="@+id/waitting_init_data_source_progressbar"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        />
+	    <TextView
+	        android:id="@+id/waitting_init_data_source_textview"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="3dip"
+	        android:text="@string/loading"
+	        android:layout_toRightOf="@id/waitting_init_data_source_progressbar"
+	        android:layout_centerVertical="true"
+	        />
+	    
+    </RelativeLayout>
+    
+    <LinearLayout 
+        android:id="@+id/load_finish_layout"
+        android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:orientation="horizontal"
+	    android:layout_below="@id/welcome_logo"
+        android:layout_centerHorizontal="true"
+        android:visibility="gone"
+        >
+        <TextView
+	        android:id="@+id/book_name"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:text="unknow"
+	        android:textAppearance="?android:attr/textAppearanceMedium"/>
+        
+	    <ImageView
+	        android:id="@+id/go_read_book"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="5dip"
+	        android:src="@drawable/gogui_next"
+	        android:layout_gravity="center_vertical"
+	        />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="org.windman.go"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        android:hardwareAccelerated="false" 
+        >
+        <activity
+            android:name="org.windman.go.MainActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity
+            android:name="org.windman.go.android.gogui.GoActivity"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+        <activity
+            android:name="org.windman.go.android.gogui.GoBookActivity"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+        
+        <activity
+            android:name="org.windman.go.android.gogui.AboutAuthorActivity"
+            android:screenOrientation="portrait"
+             >
+        </activity>
+    </application>
+
+</manifest>
